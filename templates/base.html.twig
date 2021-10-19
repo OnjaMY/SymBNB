@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SymBNB -  {% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{path('home')}} ">SymBNB</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor02">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                 <a class="nav-link active" href=" {{path('home')}} ">Accueil</a>
+                            </li>
+                           
+                           
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        {% block body %}{% endblock %}
+        <script src="js/jquery.min.js"> </script>
+        <script src="js/popper.min.js"> </script>
+        <script src="js/bootstrap.min.js"> </script>
+        
+    </body>
+</html>
